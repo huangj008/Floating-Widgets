@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script
+      src="https://kit.fontawesome.com/49fc5b1cec.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Help Crunch Widget on Chat Button Left-->
+    <script type="text/javascript">
+      (function (w, d) {
+        w.HelpCrunch = function () {
+          w.HelpCrunch.q.push(arguments);
+        };
+        w.HelpCrunch.q = [];
+        function r() {
+          var s = document.createElement("script");
+          s.async = 1;
+          s.type = "text/javascript";
+          s.src = "https://widget.helpcrunch.com/";
+          (d.body || d.head).appendChild(s);
+        }
+        if (w.attachEvent) {
+          w.attachEvent("onload", r);
+        } else {
+          w.addEventListener("load", r, false);
+        }
+      })(window, document);
+    </script>
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+    <script>
+      function openForm2() {
+        document.getElementById("myForm2").style.display = "block";
+      }
+
+      function closeForm2() {
+        document.getElementById("myForm2").style.display = "none";
+      }
+    </script>
+    <script type="text/javascript">
+      HelpCrunch("init", "ahf", {
+        applicationId: 1680,
+        applicationSecret:
+          "JBPfg3M9dpFc/xhv2FfYcXBTI/1nfSEblSiHAmytTQN5FTHCiNlr+HLVibJUUAd9zURNAc4kakO0nJdJz11Frg=="
+      });
+
+      HelpCrunch("onReady", function () {
+        document.getElementById("contact-us-chat").onclick = function () {
+          HelpCrunch("openChat");
+        };
+      });
+    </script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".pressed").click(function () {
+          var params = {
+            type: "POST",
+            url: ajaxhandle,
+            data: {
+              action: "gtranslate"
+            },
+            //dataType: 'json',
+            timeout: 30000,
+            beforeSend: function () {},
+            success: function (res) {
+              $("#glt-translate-trigger").html(res);
+            }
+          };
+          $.ajax(params);
+        });
+      });
+    </script>
+    <style>
+      /*Floating Menu*/
+      .floating-menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        z-index: 99999999;
+        position: fixed;
+        top: 50%;
+      }
+      .float-btn {
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+        border: none;
+      }
+      .floating-menu .fas {
+        color: white;
+      }
+      @media only screen and (max-width: 820px) {
+        .float-btn {
+          border-radius: 50px;
+          height: 35px;
+          width: 35px;
+          border: none;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .floating-menu .fas {
+          color: white;
+          font-size: 18px;
+        }
+      }
+      .floating-menu a {
+        margin: 3px 0px;
+      }
+
+      /*Cookies Pop Up*/
+      #cookie-law-info-again {
+        display: none !important;
+      }
+      #cookie-law-info-bar {
+        display: none !important;
+      }
+      .form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50px;
+        border: none;
+        z-index: 9;
+      }
+      .form-container {
+        max-width: 300px;
+        padding: 10px 30px;
+        background-color: white;
+      }
+      .form-container p {
+        font-size: 15px;
+      }
+      @media only screen and (max-width: 820px) {
+        .form-popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 25px;
+          border: none;
+          z-index: 9;
+        }
+        .form-container {
+          max-width: 300px;
+          padding: 10px 30px;
+          background-color: white;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .form-popup {
+          display: none;
+          position: fixed;
+          bottom: 30%;
+          top: 50%;
+          left: 25px;
+          border: none;
+          z-index: 9;
+        }
+        .form-container {
+          max-width: 300px;
+          padding: 10px 30px;
+          background-color: white;
+        }
+      }
+      .form-container .btn:hover,
+      .open-button:hover {
+        opacity: 1;
+      }
+      .cancel {
+        background: none;
+        border: none;
+      }
+      .cookie-heading {
+        font-size: 25px;
+        font-family: Oswald;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 800;
+      }
+      .cookie-paragraph {
+        font-family: Work Sans;
+        color: black;
+      }
+      /*Translator*/
+      #glt-translate-trigger {
+        right: 0px !important;
+        left: 0px !important;
+        background: transparent !important;
+      }
+      /*UserWay*/
+      .uwy.userway_p6 .uai {
+        display: none;
+      }
+      /*Newsletter Signup Pop Up*/
+      .signup-form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50px;
+        border: none;
+        z-index: 9;
+      }
+      .signup-form-container {
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+        background-color: white;
+      }
+      @media only screen and (max-width: 820px) {
+        .signup-form-popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 25px;
+          border: none;
+          z-index: 9;
+        }
+        .signup-form-container {
+          max-width: 300px;
+          padding: 10px 30px;
+          background-color: white;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .signup-form-popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 25px;
+          border: none;
+          z-index: 9;
+        }
+        .signup-form-container {
+          padding: 10px 30px;
+          background-color: white;
+        }
+      }
+      .cancel-signup {
+        border: none;
+        background: none;
+      }
+      .signup-close {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        padding: 0px 20px;
+        background: none;
+      }
+      .newsletter-heading {
+        font-size: 25px;
+        font-family: Oswald;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 800;
+        margin: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="floating-menu">
+      <a role="button" id="contact-us-chat">
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-comment-dots"></i>
+        </button>
+      </a>
+      <a role="button" class="open-button" onclick="openForm()">
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-lock"></i>
+        </button>
+      </a>
+      <a role="button" id="accessibilityWidget"
+        ><!--Custom Trigger via UW-->
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-universal-access"></i>
+        </button>
+      </a>
+      <a role="button" class="open-button" onclick="openForm2()">
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+      <a role="button" id="glt-translate-trigger">
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-language"></i>
+        </button>
+      </a>
+      <a role="button" href="https://app.mobilecause.com/form/WjEdew">
+        <button class="float-btn" style="background-color: #942020;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </button>
+      </a>
+    </div>
+
+    <div class="form-popup" id="myForm">
+      <div class="form-container">
+        <div class="signup-close">
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            <span style="color: black;">
+              X
+            </span>
+          </button>
+        </div>
+        <p>
+          <span class="cookie-heading">Privacy & Cookies Policy</span><br />
+          <span class="cookie-paragraph"
+            >This website uses cookies to improve your experience. We'll assume
+            you're ok with this, but you can opt-out if you wish.</span
+          >
+          <a
+            role="button"
+            tabindex="0"
+            class="cli_settings_button"
+            style="color: rgb(98, 163, 41);"
+            >Cookie settings</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="signup-form-popup" id="myForm2">
+      <div class="signup-form-container">
+        <div class="signup-close">
+          <button
+            type="button"
+            class="btn cancel-signup"
+            onclick="closeForm2()"
+          >
+            <span style="color: black;">
+              X
+            </span>
+          </button>
+        </div>
+        <p>
+          <span class="newsletter-heading">Newsletter Signup</span>
+        </p>
+        <iframe
+          class="newsletter-form"
+          width="250px"
+          height="250px"
+          frameborder="0"
+          src="https://ahfmarketing.formstack.com/forms/contact_copy_2_copy_copy"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      (function (d) {
+        var s = d.createElement("script");
+        s.setAttribute("data-account", "XbmRzSOxM8");
+        s.setAttribute("src", "https://cdn.userway.org/widget.js");
+        (d.body || d.head).appendChild(s);
+      })(document);
+    </script>
+    <noscript
+      >Please ensure Javascript is enabled for purposes of
+      <a href="https://userway.org">website accessibility</a></noscript
+    >
+  </body>
+</html>
